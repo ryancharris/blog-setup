@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Fragment, Component } from 'react'
 import { Link } from 'gatsby'
 
 import './Header.css'
@@ -17,7 +17,24 @@ class Header extends Component {
   }
 
   renderMenu = () => {
-    return <div className="Header__menu">Menu</div>
+    return (
+      <div className="Header__menu">
+        <div className="Header__link-list">
+          <Link className="Header__link" to="/">
+            Home
+          </Link>
+          <Link className="Header__link" to="/blog">
+            Blog
+          </Link>
+          <Link className="Header__link" to="/about">
+            About
+          </Link>
+          <Link className="Header__link" to="/contact">
+            Contact
+          </Link>
+        </div>
+      </div>
+    )
   }
 
   render() {

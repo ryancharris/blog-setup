@@ -87,9 +87,30 @@
 
 .Header__menu {
   background-color: rgba(78, 78, 78, 0.85);
+  font-size: 3em;
   height: 100vh;
   position: absolute;
+  text-align: center;
   top: 0;
   width: 100%;
   z-index: 10;
+}
+
+.Header__link-list {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
+.Header__link {
+  box-shadow: none;
+  display: flex;
+  flex: 0 1 auto;
+  color: white;
+}
+
+.Header__link:hover {
+  color: #f74902;
 }
