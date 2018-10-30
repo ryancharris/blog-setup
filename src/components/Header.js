@@ -19,7 +19,7 @@ class Header extends Component {
   renderMenu = () => {
     return (
       <div className="Header__menu">
-        <div className="Header__link-list">
+        <div className="Header__link-list" onClick={this.handleClick}>
           <Link className="Header__link" to="/">
             Home
           </Link>
@@ -50,12 +50,7 @@ class Header extends Component {
         <Link className="Header__name" to="/">
           Gritty
         </Link>
-        <div
-          className="Header__nav"
-          onClick={() => {
-            this.handleClick()
-          }}
-        >
+        <div className="Header__nav" onClick={this.handleClick}>
           <div className="Header__nav-hamburger" />
         </div>
         {menuOpen && this.renderMenu()}
