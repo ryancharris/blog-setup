@@ -5,8 +5,9 @@
 
 .Main__header {
   color: white;
+  font-size: 60px;
   position: absolute;
-  right: 50px;
+  right: 5%;
   top: 50%;
   transform: translateY(-50%);
 }

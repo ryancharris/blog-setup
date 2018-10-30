@@ -9,12 +9,14 @@
   padding: 16px;
 }
 
-.Header.is-homepage {
-  color: white;
+.Header__name {
+  box-shadow: none;
+  color: black;
+  font-size: 36px;
 }
 
-.Header__name {
-  font-size: 36px;
+.Header.is-homepage .Header__name {
+  color: white;
   text-shadow: #f74902 0 0 20px;
 }
 

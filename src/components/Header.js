@@ -1,8 +1,13 @@
 import React, { Component } from 'react'
+import { Link } from 'gatsby'
 
 import './Header.css'
 
 class Header extends Component {
+  renderMenu = () => {
+    return <div className="Header__menu" />
+  }
+
   render() {
     const { className } = this.props
 
@@ -10,7 +15,9 @@ class Header extends Component {
 
     return (
       <div className={cn}>
-        <div className="Header__name">Gritty</div>
+        <Link className="Header__name" to="/">
+          Gritty
+        </Link>
         <div
           className="Header__nav"
           onClick={() => {
