@@ -6,13 +6,13 @@
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 700;
   justify-content: space-between;
-  padding: 16px;
 }
 
 .Header__name {
   box-shadow: none;
   color: black;
   font-size: 36px;
+  margin: 16px;
 }
 
 .Header.is-homepage .Header__name {
@@ -20,8 +20,20 @@
   text-shadow: #f74902 0 0 20px;
 }
 
+.Header.is-blurred .Header__name {
+  color: transparent;
+  text-shadow: black 0 0 20px;
+}
+
+.Header.is-blurred.is-homepage .Header__name {
+  color: black;
+}
+
 .Header__nav {
   height: 26px;
+  margin: 16px;
+  position: relative;
+  z-index: 20;
 }
 
 .Header__nav-hamburger {
@@ -52,6 +64,18 @@
 
 .Header.is-homepage .Header__nav-hamburger,
 .Header.is-homepage .Header__nav-hamburger::before,
-.Header.is-homepage .Header__nav-hamburger::after {
+.Header.is-homepage .Header__nav-hamburger::after,
+.Header.is-blurred .Header__nav-hamburger,
+.Header.is-blurred .Header__nav-hamburger::before,
+.Header.is-blurred .Header__nav-hamburger::after {
   background: white;
+}
+
+.Header__menu {
+  background-color: rgba(78, 78, 78, 0.85);
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
 }
