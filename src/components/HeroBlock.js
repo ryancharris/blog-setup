@@ -7,7 +7,7 @@ class HeroBlock extends Component {
 
     return (
       <div className="HeroBlock">
-        <h1 className="HeroBlock__title">{title}</h1>
+        {title && <h1 className="HeroBlock__title">{title}</h1>}
         {date && (
           <Fragment>
             <hr className="HeroBlock__divider" />
