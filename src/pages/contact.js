@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 
 import Layout from '../components/layout'
+import HeroBlock from '../components/HeroBlock'
 
 class ContactPage extends Component {
   render() {
     return (
       <Layout location={this.props.location}>
-        <h1>Come @ Me</h1>
+        <HeroBlock title="Come @ Me" />
         <p>Let's be friends!</p>
       </Layout>
     )

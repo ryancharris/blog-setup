@@ -1,26 +1,30 @@
 .Header {
   align-items: center;
+  background: black;
   display: flex;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 700;
   justify-content: space-between;
 }
 
+.Header.is-homepage {
+  background: transparent;
+}
+
 .Header__name {
   box-shadow: none;
-  color: black;
+  color: white;
   font-size: 36px;
   margin: 16px;
 }
 
 .Header.is-homepage .Header__name {
-  color: white;
   text-shadow: #f74902 0 0 20px;
 }
 
 .Header.is-blurred .Header__name {
   color: transparent;
-  text-shadow: black 0 0 20px;
+  text-shadow: white 0 0 20px;
 }
 
 .Header.is-blurred.is-homepage .Header__name {
@@ -35,7 +39,7 @@
 }
 
 .Header__nav-hamburger {
-  background: black;
+  background: white;
   border-radius: 2px;
   height: 2px;
   position: relative;
@@ -46,7 +50,7 @@
 
 .Header__nav-hamburger::before,
 .Header__nav-hamburger::after {
-  background: black;
+  background: white;
   border-radius: 2px;
   content: '';
   height: 2px;
@@ -61,14 +65,6 @@
 
 .Header__nav-hamburger::after {
   top: 10px;
-}
-
-.Header.is-homepage .Header__nav-hamburger,
-.Header.is-homepage .Header__nav-hamburger::before,
-.Header.is-homepage .Header__nav-hamburger::after,
-.Header.is-blurred .Header__nav-hamburger::before,
-.Header.is-blurred .Header__nav-hamburger::after {
-  background: white;
 }
 
 .Header.is-blurred .Header__nav-hamburger {

@@ -41,7 +41,7 @@ class Header extends Component {
     const { className } = this.props
     const { menuOpen } = this.state
 
-    const blur = menuOpen ? 'is-blurred' : null
+    const blur = menuOpen ? 'is-blurred' : ''
 
     const cn = 'Header ' + className + ' ' + blur
 

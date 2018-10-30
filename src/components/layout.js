@@ -11,7 +11,7 @@ class Template extends Component {
   render() {
     const { location, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
-    const className = location.pathname === rootPath ? 'is-homepage' : null
+    const className = location.pathname === rootPath ? 'is-homepage' : ''
     const layoutCN = 'Layout ' + className
 
     return (

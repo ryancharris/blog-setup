@@ -1,10 +1,12 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { Link,graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 
 import Bio from '../components/Bio'
 import Layout from '../components/layout'
+import HeroBlock from '../components/HeroBlock'
+
 import { rhythm, scale } from '../utils/typography'
 
 class BlogPostTemplate extends React.Component {
@@ -21,7 +23,11 @@ class BlogPostTemplate extends React.Component {
           meta={[{ name: 'description', content: siteDescription }]}
           title={`${post.frontmatter.title} | ${siteTitle}`}
         />
-        <h1>{post.frontmatter.title}</h1>
+        <HeroBlock
+          title={post.frontmatter.title}
+          date={post.frontmatter.date}
+        />
+        {/* <h1>{post.frontmatter.title}</h1>
         <p
           style={{
             ...scale(-1 / 5),
@@ -31,7 +37,7 @@ class BlogPostTemplate extends React.Component {
           }}
         >
           {post.frontmatter.date}
-        </p>
+        </p> */}
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
@@ -50,20 +56,18 @@ class BlogPostTemplate extends React.Component {
           }}
         >
           <li>
-            {
-              previous &&
+            {previous && (
               <Link to={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
-            }
+            )}
           </li>
           <li>
-            {
-              next &&
+            {next && (
               <Link to={next.fields.slug} rel="next">
                 {next.frontmatter.title} →
               </Link>
-            }
+            )}
           </li>
         </ul>
       </Layout>
