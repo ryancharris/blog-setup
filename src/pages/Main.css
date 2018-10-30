@@ -1,0 +1,12 @@
+.Main {
+  /* background-image: url('../assets/it-me.jpg'); */
+  /* height: 100vh; */
+}
+
+.Main__header {
+  color: white;
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+}

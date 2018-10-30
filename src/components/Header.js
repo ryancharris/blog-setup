@@ -4,16 +4,21 @@ import './Header.css'
 
 class Header extends Component {
   render() {
-    debugger
+    const { className } = this.props
+
+    const cn = 'Header ' + className
+
     return (
-      <div class="Header">
-        <div class="Header__name">Gritty</div>
+      <div className={cn}>
+        <div className="Header__name">Gritty</div>
         <div
-          class="Header__nav"
+          className="Header__nav"
           onClick={() => {
-            console.log(clicked)
+            console.log('clicked')
           }}
-        />
+        >
+          <div className="Header__nav-hamburger" />
+        </div>
       </div>
     )
   }

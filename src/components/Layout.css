@@ -1,0 +1,10 @@
+.Layout {
+}
+
+.Layout.is-homepage {
+  background-image: url('../assets/it-me.jpg');
+  background-position: 75% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}

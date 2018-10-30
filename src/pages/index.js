@@ -7,6 +7,7 @@ import Bio from '../components/Bio'
 import Layout from '../components/layout'
 import { rhythm } from '../utils/typography'
 
+import './Main.css'
 class Home extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
@@ -22,7 +23,9 @@ class Home extends React.Component {
           meta={[{ name: 'description', content: siteDescription }]}
           title={siteTitle}
         />
-        <h1>HELLO!!!!!</h1>
+        <div className="Main">
+          <h1 className="Main__header">It me_</h1>
+        </div>
       </Layout>
     )
   }
