@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
-import Layout from '../components/layout'
-import HeroBlock from '../components/HeroBlock'
+import Layout from "../components/layout";
+import HeroBlock from "../components/HeroBlock";
 
 class ContactPage extends Component {
   render() {
@@ -10,8 +10,8 @@ class ContactPage extends Component {
         <HeroBlock title="Come @ Me" />
         <p>Let's be friends!</p>
       </Layout>
-    )
+    );
   }
 }
 
-export default ContactPage
+export default ContactPage;

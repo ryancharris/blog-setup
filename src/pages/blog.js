@@ -1,32 +1,32 @@
-import React from 'react'
-import { Link, graphql } from 'gatsby'
-import get from 'lodash/get'
-import Helmet from 'react-helmet'
+import React from "react";
+import { Link, graphql } from "gatsby";
+import get from "lodash/get";
+import Helmet from "react-helmet";
 
-import Layout from '../components/layout'
-import HeroBlock from '../components/HeroBlock'
+import Layout from "../components/layout";
+import HeroBlock from "../components/HeroBlock";
 
-import { rhythm } from '../utils/typography'
+import { rhythm } from "../utils/typography";
 
 class BlogIndex extends React.Component {
   render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
+    const siteTitle = get(this, "props.data.site.siteMetadata.title");
     const siteDescription = get(
       this,
-      'props.data.site.siteMetadata.description'
-    )
-    const posts = get(this, 'props.data.allMarkdownRemark.edges')
+      "props.data.site.siteMetadata.description"
+    );
+    const posts = get(this, "props.data.allMarkdownRemark.edges");
 
     return (
       <Layout location={this.props.location}>
         <Helmet
-          htmlAttributes={{ lang: 'en' }}
-          meta={[{ name: 'description', content: siteDescription }]}
+          htmlAttributes={{ lang: "en" }}
+          meta={[{ name: "description", content: siteDescription }]}
           title={siteTitle}
         />
         <HeroBlock title="My Blog!" />
         {posts.map(({ node }) => {
-          const title = get(node, 'frontmatter.title') || node.fields.slug
+          const title = get(node, "frontmatter.title") || node.fields.slug;
           return (
             <div key={node.fields.slug}>
               <h3
@@ -34,21 +34,21 @@ class BlogIndex extends React.Component {
                   marginBottom: rhythm(1 / 4),
                 }}
               >
-                <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
+                <Link style={{ boxShadow: "none" }} to={node.fields.slug}>
                   {title}
                 </Link>
               </h3>
               <small>{node.frontmatter.date}</small>
               <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
             </div>
-          )
+          );
         })}
       </Layout>
-    )
+    );
   }
 }
 
-export default BlogIndex
+export default BlogIndex;
 
 export const pageQuery = graphql`
   query {
@@ -73,4 +73,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

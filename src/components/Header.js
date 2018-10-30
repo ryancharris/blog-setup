@@ -1,20 +1,20 @@
-import React, { Fragment, Component } from 'react'
-import { Link } from 'gatsby'
+import React, { Fragment, Component } from "react";
+import { Link } from "gatsby";
 
-import './Header.css'
+import "./Header.css";
 
 class Header extends Component {
   state = {
     menuOpen: false,
-  }
+  };
 
   handleClick = () => {
     this.setState(state => {
-      const menuOpen = state.menuOpen === false ? true : false
+      const menuOpen = state.menuOpen === false ? true : false;
 
-      return { menuOpen }
-    })
-  }
+      return { menuOpen };
+    });
+  };
 
   renderMenu = () => {
     return (
@@ -34,16 +34,16 @@ class Header extends Component {
           </Link>
         </div>
       </div>
-    )
-  }
+    );
+  };
 
   render() {
-    const { className } = this.props
-    const { menuOpen } = this.state
+    const { className } = this.props;
+    const { menuOpen } = this.state;
 
-    const blur = menuOpen ? 'is-blurred' : ''
+    const blur = menuOpen ? "is-blurred" : "";
 
-    const cn = 'Header ' + className + ' ' + blur
+    const cn = "Header " + className + " " + blur;
 
     return (
       <div className={cn}>
@@ -55,8 +55,8 @@ class Header extends Component {
         </div>
         {menuOpen && this.renderMenu()}
       </div>
-    )
+    );
   }
 }
 
-export default Header
+export default Header;
