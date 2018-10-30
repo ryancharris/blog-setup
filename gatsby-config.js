@@ -5,7 +5,7 @@ module.exports = {
     description: `A Philadelphian Flyin'`,
     siteUrl: 'https://www.grittysblog.com',
   },
-  pathPrefix: '',
+  // pathPrefix: '/',
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -48,11 +48,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Gritty's Blog`,
+        short_name: `Gritty`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#F74902`,
         display: `minimal-ui`,
         icon: `src/assets/gatsby-icon.png`,
       },
