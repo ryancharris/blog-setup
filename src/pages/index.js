@@ -4,9 +4,9 @@ import get from "lodash/get";
 import Helmet from "react-helmet";
 
 import Layout from "../components/layout";
-import { rhythm } from "../utils/typography";
 
 import "./Main.css";
+
 class Home extends React.Component {
   render() {
     const siteTitle = get(this, "props.data.site.siteMetadata.title");
