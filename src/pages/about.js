@@ -18,23 +18,31 @@ class AboutPage extends Component {
           <h1 className="AboutPage__title">About Gritty</h1>
           <hr className="AboutPage__divider" />
           <p className="AboutPage__bio">
-            Ut vitae purus eu tortor molestie vulputate. Phasellus pulvinar
-            suscipit turpis, fringilla aliquet leo pellentesque sed. Aenean eget
-            ornare enim. Proin rutrum massa tellus, eu rutrum arcu commodo ac.
-            Ut facilisis porta nibh et tempor. Vestibulum eu nunc vel lectus
-            porttitor lacinia eget ac lectus. Ut tristique tincidunt ipsum, id
-            sagittis mauris. Curabitur lorem mauris, egestas ac imperdiet nec,
-            blandit fringilla neque.
+            I don't like writing about myself, but here's what my beloved
+            Philadelphia Flyers have to say about me:
           </p>
-          <p className="AboutPage__bio">
-            ullam et turpis volutpat, condimentum eros congue, rutrum libero.
-            Nullam consequat lacus id accumsan finibus. Maecenas imperdiet
-            faucibus dapibus. Suspendisse velit diam, aliquam quis sollicitudin
-            quis, consectetur vel ligula. Nunc ultricies consequat interdum.
-            Quisque eleifend placerat nisi, ac vulputate elit accumsan eget.
-            Pellentesque aliquet nibh quis tortor mollis, sed interdum mi
-            blandit.
-          </p>
+          <blockquote className="AboutPage__bio">
+            His father was a "bully," so naturally he has some of those
+            tendencies - talented but feisty, a fierce competitor, known for his
+            agility given his size. He's loyal but mischievous; the ultimate
+            Flyers fan who loves the orange and black, but is unwelcoming to
+            anyone who opposes his team. Legend has it he earned the name
+            "Gritty" for possessing an attitude so similar to the team he
+            follows.
+          </blockquote>
+          <blockquote className="AboutPage__bio">
+            He claims that he's been around for a lot longer than we know it,
+            and recent construction at the Wells Fargo Center disturbed his
+            secret hideout forcing him to show his face publicly for the first
+            time. He has some oddities that are both humorous and strange. A
+            number of times he's been caught eating snow straight from the
+            Zamboni machine, and unbeknown to most, his love of hot dogs has
+            been inflating the Flyers Dollar Dog Night consumption totals for
+            years.
+          </blockquote>
+          <blockquote className="AboutPage__bio">
+            That being said, there's no denying that he's one of our own.
+          </blockquote>
         </PageBody>
       </Layout>
     );
