@@ -14,9 +14,6 @@ h6 {
   padding: 0;
 }
 
-.Layout {
-}
-
 .Layout.is-homepage {
   background-image: url("../assets/it-me.jpg");
   background-position: 75% 50%;

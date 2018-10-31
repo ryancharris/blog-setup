@@ -5,7 +5,7 @@ module.exports = {
     description: `A Philadelphian Flyin'`,
     siteUrl: "https://www.grittysblog.com",
   },
-  // pathPrefix: '/',
+  pathPrefix: "/blog-setup",
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
