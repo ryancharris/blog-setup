@@ -4,6 +4,7 @@ import { Link } from "gatsby";
 import { rhythm, scale } from "../utils/typography";
 
 import Header from "./Header";
+import Footer from "./Footer";
 
 import "./Layout.css";
 
@@ -18,6 +19,7 @@ class Template extends Component {
       <div className={layoutCN}>
         <Header className={className} />
         {children}
+        {location.pathname !== rootPath && <Footer />}
       </div>
     );
   }
