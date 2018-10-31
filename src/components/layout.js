@@ -9,14 +9,16 @@ import "./css/Layout.css";
 
 class Template extends Component {
   getPageTitle = path => {
+    const rootPath = `${__PATH_PREFIX__}`;
+
     switch (path) {
-      case "/about":
+      case `${rootPath}/about`:
         return "About";
-      case "/blog":
+      case `${rootPath}/blog`:
         return "Blog";
-      case "/contact":
+      case `${rootPath}/contact`:
         return "Contact";
-      case "/":
+      case `${rootPath}/`:
         return "Hi!";
       default:
         break;
