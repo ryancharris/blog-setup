@@ -14,6 +14,12 @@ h6 {
   padding: 0;
 }
 
+.Layout {
+  display: grid;
+  grid-template-rows: 95px 300px 1fr 45px;
+  min-height: 100vh;
+}
+
 .Layout.is-homepage {
   background-image: url("../assets/it-me.jpg");
   background-position: 75% 50%;
