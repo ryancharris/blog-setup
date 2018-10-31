@@ -4,13 +4,9 @@ import Layout from "../components/layout";
 import HeroBlock from "../components/HeroBlock";
 import PageBody from "../components/PageBody";
 
-// import earthSVG from "../assets/earth.svg";
-import twitterSVG from "../assets/twitter.svg";
+import earthSVG from "../assets/earth.svg";
+import twtitterSVG from "../assets/twitter.svg";
 import instagramSVG from "../assets/instagram.svg";
-
-import EarthSVG from "!svg-react-loader!../assets/earth.svg?name=EarthSVG";
-import TwitterSVG from "!svg-react-loader!../assets/twitter.svg?name=TwitterSVG";
-import InstagramSVG from "!svg-react-loader!../assets/instagram.svg?name=InstagramSVG";
 
 import "../components/Contact.css";
 
@@ -27,13 +23,13 @@ class ContactPage extends Component {
                 className="Contact__link"
                 href="https://www.nhl.com/flyers/fans/gritty"
               >
-                <EarthSVG className="Contact__social-icon" />
+                <img className="Contact__social-icon" src={earthSVG} />
                 <span className="Contact__link-label">Hire me</span>
               </a>
             </li>
             <li className="Contact__list-item">
               <a className="Contact__link" href="https://twitter.com/GrittyNHL">
-                <TwitterSVG className="Contact__social-icon" />
+                <img className="Contact__social-icon" src={twtitterSVG} />
                 <span className="Contact__link-label">Tweet Me</span>
               </a>
             </li>
@@ -42,7 +38,7 @@ class ContactPage extends Component {
                 className="Contact__link"
                 href="https://www.instagram.com/grittynhl"
               >
-                <InstagramSVG className="Contact__social-icon" />
+                <img className="Contact__social-icon" src={instagramSVG} />
                 <span className="Contact__link-label">Insta Me</span>
               </a>
             </li>
